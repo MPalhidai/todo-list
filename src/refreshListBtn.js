@@ -2,17 +2,22 @@ const refreshListBtn = (location, listName) => {
   let element = document.createElement('button');
   element.innerHTML = "New List";
   element.setAttribute("class","btn btn-outline-danger");
-  element.setAttribute("data-toggle","modal");
-  element.setAttribute("data-target","#deleteModal");
+
+
+  const alert = () => {
+    document.querySelector('.alert').setAttribute("style", "display: block;");
+  }
 
   const deleteList = () => {
     let list = document.getElementById(listName);
     while (list.firstChild) {
       list.removeChild(list.firstChild);
     }
+    document.querySelector('.alert').setAttribute("style", "display: none;")
   }
 
-  document.getElementById('removeProjects').addEventListener("click", () => {deleteList()});
+  element.addEventListener("click", () => {alert()});
+  document.getElementById('alert-link').addEventListener("click", () => {deleteList()});
   location.insertAdjacentElement("beforeend", element);
 }
 
