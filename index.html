@@ -16,7 +16,7 @@
     <!-- Delete Alert -->
     <section>
       <div class="alert alert-danger alert-dismissible fade show text-center" role="alert">
-        ALERT! <a href="#" id="alert-link">This will delete the entire list. Click the link if you are sure.</a>
+        ALERT! <a href="#" class="alert-link">This will delete the entire list. Click the link if you are sure.</a>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -52,7 +52,7 @@
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-            <form onsubmit="projectDiv">
+            <form class="projectForm">
               <div class="modal-body">
                 <div class="form-group">
                   <label for="Project_Name">Project Name: </label>
@@ -63,21 +63,27 @@
                   <input type="date" class="form-control" id="Due_Date" required>
                 </div>
                 <div class="btn-group btn-group-toggle text-center" data-toggle="buttons">
-                  <label for="options" class="text-left">Priority: </label>
-                  <label class="btn btn-success active">
-                    <input type="radio" name="options" id="option1" autocomplete="off" value="Low" checked> Low
-                  </label>
-                  <label class="btn btn-warning">
-                    <input type="radio" name="options" id="option2" autocomplete="off" value="Medium"> Medium
-                  </label>
-                  <label class="btn btn-danger">
-                    <input type="radio" name="options" id="option3" autocomplete="off" value="High"> High
-                  </label>
+                  <div class="form-check form-check-inline">
+                    <label for="options" class="text-left">Priority: </label>
+                    <label class="btn btn-success active">
+                      <input class="form-check-input" type="radio" name="options" id="option1" autocomplete="off" value="Low" checked> Low
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="btn btn-warning">
+                      <input class="form-check-input" type="radio" name="options" id="option2" autocomplete="off" value="Medium"> Medium
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="btn btn-danger">
+                      <input class="form-check-input" type="radio" name="options" id="option3" autocomplete="off" value="High"> High
+                    </label>
+                  </div>
                 </div>
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-success" id="addProject">Save</button>
+                <button type="submit" class="btn btn-success" id="addProject" data-dismiss="modal">Save</button>
               </div>
             </form>
           </div>
