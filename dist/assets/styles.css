@@ -1,10 +1,17 @@
+p {
+  margin-bottom: 0.5rem;
+}
+
+li {
+  margin-bottom: 1.5rem;
+}
 
 .alert {
   display: none;
 }
 
 .btn {
-  margin: 0.5rem;
+  margin: 4px;
 }
 
 .title {
@@ -15,4 +22,17 @@
 
 #projects {
   margin-top: 1rem;
+}
+
+.Project_box {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.task_list {
+  margin: 2rem;
+}
+
+.task_input {
+  margin: 8px;
 }

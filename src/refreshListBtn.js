@@ -8,6 +8,10 @@ const refreshListBtn = (location, listName) => {
     document.querySelector('.alert').setAttribute("style", "display: block;");
   }
 
+  const dismiss = () => {
+    document.querySelector('.alert').setAttribute("style", "display: none;");
+  }
+
   const deleteList = () => {
     let list = document.getElementById(listName);
     while (list.firstChild) {
@@ -17,6 +21,7 @@ const refreshListBtn = (location, listName) => {
   }
 
   element.addEventListener("click", () => {alert()});
+  document.querySelector('.alert-dismiss').addEventListener("click", () => {dismiss()});
   document.querySelector('.alert-link').addEventListener("click", () => {deleteList()});
   location.insertAdjacentElement("beforeend", element);
 }
