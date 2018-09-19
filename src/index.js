@@ -11,3 +11,4 @@ top.innerHTML = header;
 refreshListBtn(top, 'Project');
 addLiBtn(top, 'Project');
 //main
+document.querySelector('#addProject').addEventListener("click", () => {projectDiv('Project')});

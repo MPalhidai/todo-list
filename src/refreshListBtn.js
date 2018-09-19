@@ -17,7 +17,7 @@ const refreshListBtn = (location, listName) => {
   }
 
   element.addEventListener("click", () => {alert()});
-  document.getElementById('alert-link').addEventListener("click", () => {deleteList()});
+  document.querySelector('.alert-link').addEventListener("click", () => {deleteList()});
   location.insertAdjacentElement("beforeend", element);
 }
 
